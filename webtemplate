@@ -1,4 +1,6 @@
 <?php
+    // ATTENTION PLEASE! This file is a webpage template file and it is aimed at my core team who have been informed how to use it
+    // PLEASE DO NOT FORK OR MODIFY
     // please uncomment these lines below before deploying this page and other pages to the server
 	//  You'll see "$mitch->get_date();" an object that simply prints the current year 
     //require_once("year.php");
