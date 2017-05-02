@@ -1,0 +1,361 @@
+<?php
+    // please uncomment these lines below before deploying this page and other pages to the server
+	//  You'll see "$mitch->get_date();" an object that simply prints the current year 
+    //require_once("year.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This would serve as a template file. Copy whatever UI elemente you would need for your page from here and insert your own contents 
+       The prefix that you add is only for the purpose of local testing, be sure to remove it before deploying to the server itself  
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+	<meta name="robot" content="...,..."/>
+	<meta name="googlebot" content="...,..."/>
+	<link rel="icon" href="loga2.png"> <!-- ATTENTION! Add prefix here too. Remember to remove it before server deployment -->
+	<meta name="author" content="Macroonz">
+	
+	<meta name="description" content="At the end of the day you'll learn how to group HTML elements so you can style them effectively part one. Create your first html page in minutes. making full functional website step by step"/>
+	<title>Grouping HTML Elements part 1</title>
+	
+    <!-- Bootstrap -->
+	<!-- If you use this like this for development the css wont work. I wll give you a prefix for the files. But when you are sending it to the server 
+	       just make sure every thing is exactly like this, without the prefixes BEFORE TO THE SERVER
+		   please insert the prefix in each of the following five links below
+	-->
+    <link href="bootstrap.min.css" rel="stylesheet"> <!-- the lines to add prefixes starts from here --->
+	<link href="home.css" rel="stylesheet">
+	<link href="html lesson 1.css" rel="stylesheet">
+	<link href="fiddle.css" rel="stylesheet">
+	<link href="prism.css" rel="stylesheet"> <!-- the lines to add prefixes ends here -->
+	
+	<script src="https://use.fontawesome.com/034e9bf631.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://macroonz.com/bootstrap.min.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head> <!-- head section ends here -->
+  
+  <body> <!-- body section starts -->
+  
+   <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </button>
+     <img class="sam-logo" src="http://macroonz.com/logo.png" alt="macroonz.com logo">
+	 <a class="nav-brand" href="#">Macroonz</a>
+     <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+	   <li class="togli1"><a class="tog1" href="php-for-beginners-1.php">PHP</a></li>
+	   <li class="togli2"><a class="tog2" href="html-lesson-1.php" >HTML</a></li>
+	   <li class="togli3"><a class="tog3" href="css-for-beginners-one.php" >CSS</a></li>
+	   <li class="togli4"><a class="tog4" href="lesson-starting-javascript1" >JavaScript</a></li>
+	   <li class="togli5"><a class="tog5" href="lesson-starting-jquery1" >JQuery</a></li>
+	   <li class="dropdown">
+	    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> See more <b class="caret"></b></a>
+	    <ul class="dropdown-menu">
+	     <li class="drp-dwn" id="drp1"><a href="csharp-beginers01.php">C#</a></li>
+	     <li class="drp-dwn" id="drp2"><a href="intro-to-java01.php">Java</a></li>
+	     <li class="drp-dwn" id="drp3"><a href="intro-to-android-development-1.php">Android</a></li>
+	    </ul>
+	   </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+   
+   <div class="jumbotron text-center">
+    <div class="container-fluid"><span class="slogan" id="slg"></span>
+     <h1>Grouping HTML Elements And Tags</h1>
+	 <h3 class="slogan">Introduction to Web Programming</h3>
+	 <em>lesson 3</em>
+	</div>
+   </div>
+   <div class="container-fluid"> <!-- starting the content wrapper -->
+   
+   <!-- Links come first in this row -->
+    <div class="row">
+     <div class="col-md-3" id="dont-a">
+      <h4 class="ch-h">View Our Tutorials</h4>
+   
+      <div class="b-listing">
+		<a href="#" class="list-group-item">Web design basics</a>
+		<a href="#" class="list-group-item">Using links</a>
+		<a href="#" class="list-group-item active">Grouping Elements</a>
+		<a href="#" class="list-group-item">Understanding CSS</a>
+		<a href="#" class="list-group-item">A better PHP development</a>
+		<a href="#" class="list-group-item">21 Most used Linux commands</a>
+		<a href="#" class="list-group-item">Xampp for PHP development</a>
+      </div><!-- closing "b-listing" -->
+     </div><!-- closing "col-md-3"  -->
+   
+    <div class="col-md-6">
+
+	<!-- Beginning social buttons -->
+	<div class="social-btn">
+      <a class="ctn" href="https://twitter.com/share" aria-label=""><button type="button" id="twt" class="btn btn-default btn-sm">
+       <i class="fa fa-twitter-square fa-lg" id="off-bue" aria-hidden="true"><span class="small">&nbsp;&nbsp;&nbsp;</span></i><span class="t">Tweet</span></button>
+      </a>
+	  
+	  
+	  <a href="https://plus.google.com/share"><button type="button" class="btn btn-default btn-sm">
+	   <img src="https://www.gstatic.com/images/icons/gplus-16.png"><span class="g">&nbsp;&nbsp;&nbsp;Share</span></button></a>
+	  <a href="https://facebook.com/macroonz/" aria-label=""><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Like</button></a>
+	  <a href="https://facebook.com/share/" aria-label="">
+       <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Share</button>
+      </a>
+	</div>  <!-- social buttons ended here -->
+		
+    <div class="lbtn">
+	 <button>
+	  <a href="html-lesson-2.php">&laquo; Previous</a>
+	 </button>
+	 <button class="fl-rt">
+	  <a href="css-for-beginners-one.php">Next &raquo;</a>
+	 </button>
+	</div>
+	<!--<button class="default">
+	<a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </button>-->
+	
+	<div class="panel panel-info"><!-- Text content wrapper starts here -->
+	 <div class="panel-body">
+	  <h3>Prerequisites and requirements</h3>
+	  <br />
+	  <p>This lesson is best suited for absolute beginers, however, we will gradually wade in discussing advanced features in web development using <code>HTMLl5</code> and <code>CSS3</code>; prior experience is not neccessary.<br /> <br /> What you need for this lesson: A computer, text editor, browsers (latest versions, Chrome is recommended). In the tutorials we will be using Notepad++. If you dont have it, you can <a href="https://notepad-plus-plus.org/">download it here</a> for free <br />The Web Development tutorials are for everyone.</p>
+	 </div>
+	</div><!-- this wrapper ends -->
+	<br /><br /><br />
+	
+	<!--   [for team] The following divisions sumarizes how to EMPHASIZE IMPORTANT CONCEPTS THAT YOU WANT TO HIGHLIGHT FOR  YOUR READERS. use it when needed -->
+    <div class="row"> <!-- this one uses pencil icon -->
+	 <div class="panel panel-default">
+	  <div class="panel-body">
+	   <i class="fa fa-pencil-square fa-3x" aria-hidden="true">  </i>
+	    The <code>&lt;img></code> tag specifies an image; <code>src</code> specifies the source of the image. We have used the image file my-image.png as a link to the page first.html, but a few more things went on: you would have noticed that the first and second declarations,<code>&lt;!DOCTYPE html></code> and <code>&lt;html></code> are at the same level compared to the <code>&lt;head></code> tag. The same applies to the <code>&lt;title></code> element which is one level deep compared to the <code>&lt;head></code> tag. This is because the code was indented. Other tags have different depths; some are one step deep, others are two steps deep. Always indent accordingly.
+	  </div>
+	 </div>
+	</div><br /> <!-- The first div for highlights just ended here -->
+	
+    <div class="row"> <!-- Another one is starting here. This one uses quote icon -->
+	 <div class="panel panel-default">
+	  <div class="panel-body">
+	   <i class="fa fa-quote-left fa-3x" aria-hidden="true">  </i>
+	    Any html element  placed between the opening and closing tags of another element has to be indented.Use either the <span class="bold-class">Tab</span> or the <span class="bold-class">Space</span> key for indentation. Indenting your code is not mandatory, yet it makes your code easy to read and helps you to avoid errors.  
+	   <i class="fa fa-quote-right fa-lg" aria-hidden="true">  </i> 
+      </div>
+	 </div>
+	</div><br /> <!-- this info panel/info division just ended here -->
+    
+    <!-- another one starts -->	
+	<div class="row"> <!-- This one uses circle-info icon -->
+	 <div class="panel panel-info">
+	  <div class="panel-body">
+	   <i class="fa fa-info-circle fa-3x" aria-hidden="true">  </i>
+	    Make sure you practice and practice and practice. If you only read this content, it may be difficult for you to learn. Open your text editor (see prerequisite above) and write the codes with your own hands, don't even copy and paste__ yes make sure you don't copy and paste code ,always write it yourself, then run it to see what it does.
+	  </div>
+	 </div>
+	</div>
+
+	
+    <h3 class="m-box">Using <code>&lt;p>,&lt;div>, &lt;ul>, &lt;ol></code>, And The <code>&lt;li></code> Tags</h3><br />
+	<p class="p-flow">If you followed the <a href="html-lesson-2.php">previous lesson</a>, here's the solution to the challange.</p>
+	
+	<h3 class="example-count">html example</h3>
+	<pre><code class="language-html">&lt;body>
+	&lt;div>
+		&lt;div style="height: 100px; width: 100%; background: DarkSeaGreen;">
+			&lt;h2 style="color: Navy;">&lt;/h2>
+		&lt;/div>
+		&lt;ul style="background: LightCyan;">
+			&lt;li>&lt;/li>
+			&lt;li>&lt;/li>
+			&lt;li>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/body></code></pre>
+	<h3 class="example-output">Output</h3>
+	<div class="my-fig">
+	 <figure class="output">
+	  <img class="image" src="h3p1b.png" alt="Result">
+	 </figure>
+	</div>
+	<br />
+    <p class="p-flow">Now let's consider the output above, which should be similar to yours; you can see something like a header section, and page's main content which is "3 levels deep" repeated three times. The web page is improving but still doesn't look like anything seen on the internet today. That's Ok! At least we're catching up. let's add more elements as shown below.</p>
+	<br />
+    <h3 class="m-box">Add Paragraphs By Using The  <code>&lt;p></code> Tag</h3>
+	<p>Add at least three paragraphs in the code above by using the paragraph tag as shown above. You'd add the paragraphs <code>&lt;p>...&lt/p></code> after the <code>&lt;/ul></code> closing tag in example 1 line 10. Your <code>&lt;p>...&lt;/p></code> tags should be at the same level as the <code>&lt;/ul></code> . Copy and paste your  <code>&lt;p>...&lt;/p></code> in three different lines. Next, write up to 30 sentences, or more in each paragraph; you may copy and paste a sentence 30 times. The ellipsis  seen inside  <code>&lt;p>...&lt;/p></code> has to be replaced by the content of your paragraph. Do this for each  <code>&lt;p>...&lt;/p></code> tags. Insert another  <code>&lt;div></code> just after the closing <code>&lt;/div></code>tag of the first <code>&lt;div></code> tag in line 5. Your HTML file has to look like the one below.</p>
+    <br />
+	<h3 class="example-count">javascript example</h3>
+	<pre><code class="language-js"$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Austin, TX',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '&lt;h2>&lt;i class="icon-'+weather.code+'">&lt;/i> '+weather.temp+'&deg;'+weather.units.temp+'&lt;/h2>';
+      html += '&lt;ul>&lt;li>'+weather.city+', '+weather.region+'&lt;/li>';
+      html += '&lt;li class="currently">'+weather.currently+'&lt;/li>';
+      html += '&lt;li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'&lt;/li></ul>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('&lt;p>'+error+'&lt;/p>');
+    }
+  });
+});</code></pre>
+	<br />
+	<h3>Using The <code>&lt;div></code> Tag</h3>
+
+	<h3 class="example-count">C language example</h3>
+	<pre><code class="language-c">#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+	printf("hello, world\n");
+}</code></pre>
+	<br />
+	<h3 class="example-output">Output</h3>
+	<pre><code class="language-cpp">int main () {
+    // Say HelloWorld five times
+    for (int index = 0; index < 5; ++index)
+      cout << "HelloWorld!" << endl;
+    char input = 'i';
+    cout << "To exit, press 'm' then the 'Enter' key." << endl;
+    cin  >> input;
+    while(input != 'm') {
+        cout << "You just entered '" << input << "'. "
+             << "You need to enter 'm' to exit." << endl;
+        cin  >> input;
+    }
+    cout << "Thank you. Exiting." << endl;
+    return 0;
+}</code></pre>
+	
+	<h3 class="exemple-count">Python example</h3>
+	<pre><code class="language-python">>>> greeting = True
+>>> if greeting:
+...     print("Hello World!")</code></pre>
+	
+	<br />
+	<h3 class="example-count">C# example</h3>
+	<pre><code class="language-csharp">class Person
+{
+    public string Name { get; }
+    public Person(string name) => Name = name ?? throw new ArgumentNullException(nameof(name));
+    public string GetFirstName()
+    {
+        var parts = Name.Split(" ");
+        return (parts.Length > 0) ? parts[0] : throw new InvalidOperationException("No name!");
+    }
+    public string GetLastName() => throw new NotImplementedException();
+}</code></pre>
+    <div class="panel panel-info">
+	<div class="panel-body">
+	 <h3>Quick Review</h3>
+	 <p>In a short time, we've seen:
+	  <ol>
+	   <li>How to add contents like paragraphs to your web page</li>
+	   <li>How use the <code>div</code> tag</li>
+	   <li>How to use the <code>ul</code> tag</li>
+	   <li>How to use the <code>ol</code> tag</li>
+	   <li>How to use the <code>li</code> tag</li>
+	   <li>You saw so briefly how to change the look of your web page using CSS</li>
+	  </ol>
+	 </p>
+	 <p>To learn more about CSS <a href="css-for-beginners-one.php">click here</a>. We shall now see to use HTML5 new tags can make our life much easier </p>
+	</div><!-- end of panel body -->
+    </div><!-- end of panel-info -->
+	
+	<div class="lbtn">
+	 <button>
+	  <a href="html-lesson-2.php">&laquo; Previous</a>
+	 </button>
+	 <button class="fl-rt">
+	  <a href="css-for-beginners-one.php">Next &raquo;</a>
+	 </button>
+	</div>
+	
+	<!-- Beginning social buttons -->
+	<div class="social-btn">
+      <a class="ctn" href="https://twitter.com/share" aria-label=""><button type="button" id="twt" class="btn btn-default btn-sm">
+       <i class="fa fa-twitter-square fa-lg" id="off-bue" aria-hidden="true"><span class="small">&nbsp;&nbsp;&nbsp;</span></i><span class="t">Tweet</span></button>
+      </a>
+	  
+	  
+	  <a href="https://plus.google.com/share"><button type="button" class="btn btn-default btn-sm">
+	   <img src="https://www.gstatic.com/images/icons/gplus-16.png"><span class="g">&nbsp;&nbsp;&nbsp;Share</span></button></a>
+	  <a href="https://facebook.com/macroonz/" aria-label=""><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Like</button></a>
+	  <a href="https://facebook.com/share/" aria-label="">
+       <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Share</button>
+      </a>
+	</div>  <!-- social buttons ended here -->
+	
+	</div><!-- second column ends here -->
+	
+	<div class="col-md-3" id="dont-n"><!-- last column for ads only -->
+		<p>  <!-- ADS HERE ONLY and for a large screen the ads appear to the right of the screen -->  </p>
+	</div><!-- last column for ads ends here -->
+	
+	</div><!-- here ends the "row" -->
+	<div class="row" id="dont-b">
+     <div class="col-md-4" id="dont-x">
+      <h4 class="ch-h">View Our Tutorials</h4>
+   
+      <div class="b-listing">
+      <div class="b-listing">
+		<a href="#" class="list-group-item">Web design basics</a> <!-- this list is different from what you can see on server but it mirrors the changes to take place soon -->
+		<a href="#" class="list-group-item">Using links</a>
+		<a href="#" class="list-group-item active">Grouping Elements</a>
+		<a href="#" class="list-group-item">Understanding CSS</a>
+		<a href="#" class="list-group-item">A better PHP development</a>
+		<a href="#" class="list-group-item">21 Most used Linux commands</a>
+		<a href="#" class="list-group-item">Xampp for PHP development</a>
+      </div><!-- closing "b-listing" -->
+     </div><!-- closing "col-md-4" aka dont-x  -->
+     <div class="col-md-4" id="dont-y">
+      <!--
+		 THIS SPACE RESERVED FOR ADS
+      -->
+     </div><!-- closing "col-md-4" aka dont-y -->
+     <div class="col-md-4" id="dont-z">
+      <!--
+	    THIS SPACE RESERVED FOR ADS
+	  -->
+     </div><!-- closing "col-md-4" aka dont-z -->
+	</div><!-- #dont-b ends here aka row -->
+	
+   </div><!-- here ends the main content wrapper -->
+   <br />
+    
+   <footer class="my-footer">
+   <br />
+     <p class="pull-right"><a href="#">Back to top</a></p>
+     
+     <p class="footer-style-1">&copy; <?php //print $mich->get_date(); ?> <span class="my-brand">Macroonz</span> </p>
+    </footer>
+   
+  </body>
+  <script src="fiddle.js"></script> <!-- Add the prefix here too -->
+  <script src="prism.js"></script>  <!-- Add the prefix here too  -->
+  <script src="updater.js"></script>
+</html>                                                                                                                                                                                                                                   
